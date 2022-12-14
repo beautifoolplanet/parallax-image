@@ -8,6 +8,7 @@ library parallax_image;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/material.dart' as material;
 
 /// A widget that paints an image and moves it at a slower speed than the main
 /// scrolling content.
@@ -124,7 +125,7 @@ class _Parallax extends SingleChildRenderObjectWidget {
       ..image = image!
       ..scrollPosition = scrollPosition!
       ..screenSize = screenSize!
-      ..color = color!;
+      ..color = color ?? material.Colors.black;
   }
 }
 
